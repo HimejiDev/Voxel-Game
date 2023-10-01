@@ -442,7 +442,7 @@ MonoBehaviour:
   rb: {fileID: 7603338403531848724}
   cam: {fileID: 959418438}
   sensitivity: 1
-  speed: 100
+  speed: 50
   jumpForce: 1
   gravity: 1
 --- !u!1660057539 &9223372036854775807

@@ -19,14 +19,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce = 1f;
     [SerializeField] private float gravity = 1f;
 
+    private Vector2 moveVector = Vector2.zero;
+
     /* Custom Functions */
     private void OnMovementPerformed(InputAction.CallbackContext context) {
-        Vector2 movementInput = context.ReadValue<Vector2>();
-        Vector3 movement = new(movementInput.x, 0f, movementInput.y);
-        movement = cam.TransformDirection(movement);
-        movement.y = 0f;
-        movement.Normalize();
-        rb.AddForce(movement * speed);
+        moveVector = context.ReadValue<Vector2>();
+    }
+
+    private void OnMovementCancelled(InputAction.CallbackContext context) {
+        moveVector = Vector2.zero;
     }
 
     /* Default Functions */
@@ -38,15 +39,21 @@ public class PlayerMovement : MonoBehaviour
         input.Enable();
 
         input.Player.Movement.performed += OnMovementPerformed;
+        input.Player.Movement.canceled += OnMovementCancelled;
     }
 
     void OnDisable() {
         input.Disable();
 
         input.Player.Movement.performed -= OnMovementPerformed;
+        input.Player.Movement.canceled -= OnMovementCancelled;
     }
 
-    void Update() {
-
+    void FixedUpdate() {
+        Vector3 movement = new(moveVector.x, 0f, moveVector.y);
+        movement = cam.TransformDirection(movement);
+        movement.y = 0f;
+        movement.Normalize();
+        rb.AddForce(movement * speed);
     }
 }
