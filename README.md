@@ -10,7 +10,7 @@
 - Endless exploration 🌄: Embark on epic journeys, uncover hidden treasures, and traverse diverse terrains as you venture further into the infinite world.
 
 ## Download and Play 🚀
-Ready to dive into our voxel adventure? <!-- You can download and play the latest version of our game right now on [itch.io](https://h1mejidev.itch.io/voxel-game) or here on [GitHub](https://github.com/HimejiDev/Voxel-Game/releases/latest) --> Unforunately you will have to wait a little bit 😢, since [Version 0.1](https://github.com/HimejiDev/Voxel-Game/#version-01) is being worked on. 
+Ready to dive into our voxel adventure? <!-- You can download and play the latest version of our game right now on [itch.io](https://h1mejidev.itch.io/voxel-game) or here on [GitHub](https://github.com/HimejiDev/Voxel-Game/releases/latest) --> Unfortunately you will have to wait a little bit 😢, since [Version 0.1](https://github.com/HimejiDev/Voxel-Game/#version-01) is still being worked on.
 
 **Note**: We are continuously updating the game, so be sure to check back for the latest releases and improvements!
 
