@@ -19,8 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Movement Settings")]
     [SerializeField] public float speed = 10f;
-    [SerializeField] private float acceleration = 20f;
-    [SerializeField] private float deceleration = 40f;
+    [SerializeField] private float smoothness = 5f;
     [SerializeField] public float jumpForce = 1f;
     [SerializeField] public float gravity = 1f;
 
@@ -30,42 +29,43 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveVector = Vector2.zero;
 
     /* Custom Functions */
-    private void OnMovementPerformed(InputAction.CallbackContext context) {
+    private void OnMovementPerformed(InputAction.CallbackContext context)
+    {
         moveVector = context.ReadValue<Vector2>();
     }
 
-    private void OnMovementCancelled(InputAction.CallbackContext context) {
+    private void OnMovementCancelled(InputAction.CallbackContext context)
+    {
         moveVector = Vector2.zero;
     }
 
     /// <summary>
-    /// Calculates and returns the desired velocity based on the provided movement vector and speed, considering acceleration and deceleration.
+    /// Calculates and returns the desired velocity based on the provided movement vector and speed, with a smooth transition.
     /// </summary>
     /// <param name="movement">The movement vector.</param>
     /// <returns>The calculated velocity.</returns>
-    private Vector3 CalculateVelocity(Vector3 movement) {
-        // calculate the desired velocity based on moveVector and speed
+    private Vector3 CalculateVelocity(Vector3 movement)
+    {
+        // Calculate the desired velocity based on moveVector and speed
         Vector3 desiredVelocity = movement * speed;
 
-        // calculate the current velocity in the direction of desired velocity
+        // Calculate the current velocity in the direction of desired velocity
         Vector3 currentVelocity = pRigidbody.velocity;
         currentVelocity.y = pRigidbody.velocity.y;
 
-        if (desiredVelocity.magnitude > currentVelocity.magnitude) {
-            currentVelocity += (acceleration > 0f) ? acceleration * Time.deltaTime * movement : Vector3.zero;
-        } else {
-            currentVelocity += (deceleration > 0f) ? deceleration * Time.deltaTime * movement : Vector3.zero;
-        }
+        // Smoothly interpolate between current velocity and desired velocity
+        currentVelocity = Vector3.Lerp(currentVelocity, desiredVelocity, Time.deltaTime * smoothness);
 
-        return (acceleration > 0f || deceleration > 0f) ? currentVelocity : desiredVelocity;
+        return currentVelocity;
     }
 
     /// <summary>
     /// Moves the player character based on the input moveVector, ensuring a maximum speed is maintained.
     /// </summary>
-    private void MovePlayer() {
+    private void MovePlayer()
+    {
         // calculate movement vector
-        Vector3 movement = new Vector3(moveVector.x, pRigidbody.velocity.y, moveVector.y);
+        Vector3 movement = new(moveVector.x, pRigidbody.velocity.y, moveVector.y);
         movement = pCamera.TransformDirection(movement);
         movement.y = pRigidbody.velocity.y;
         movement.Normalize();
@@ -78,27 +78,31 @@ public class PlayerMovement : MonoBehaviour
     }
 
     /* Default Functions */
-    void Awake() {
+    void Awake()
+    {
         input = new PlayerInput();
     }
 
-    void OnEnable() {
+    void OnEnable()
+    {
         input.Enable();
 
         input.Player.Movement.performed += OnMovementPerformed;
         input.Player.Movement.canceled += OnMovementCancelled;
     }
 
-    void OnDisable() {
+    void OnDisable()
+    {
         input.Disable();
 
         input.Player.Movement.performed -= OnMovementPerformed;
         input.Player.Movement.canceled -= OnMovementCancelled;
     }
 
-    void FixedUpdate() {
+    void FixedUpdate()
+    {
         MovePlayer();
-        
+
 
         currentMoveSpeed = pRigidbody.velocity.magnitude;
         speedText.text = $"Speed: {currentMoveSpeed} m/s";
