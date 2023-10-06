@@ -10,12 +10,12 @@
 - Endless exploration 🌄: Embark on epic journeys, uncover hidden treasures, and traverse diverse terrains as you venture further into the infinite world.
 
 ## Download and Play 🚀
-Ready to dive into our voxel adventure? <!-- You can download and play the latest version of our game right now on [itch.io](https://h1mejidev.itch.io/voxel-game) or here on [GitHub](https://github.com/HimejiDev/Voxel-Game/releases/latest) --> Unfortunately you will have to wait a little bit 😢, since [Alpha Version 0.1](https://github.com/HimejiDev/Voxel-Game/#alpha-version-01) is still being worked on.
+Ready to dive into our voxel adventure? <!-- You can download and play the latest version of our game right now on [itch.io](https://h1mejidev.itch.io/voxel-game) or here on [GitHub](https://github.com/HimejiDev/Voxel-Game/releases/latest) --> Unfortunately you will have to wait a little bit 😢, since [Alpha Version 0.1 (v0.1A)](https://github.com/HimejiDev/Voxel-Game/#alpha-version-01-v01a) is still being worked on.
 
-**Note**: We are continuously updating the game, so be sure to check back for the latest releases and improvements!
+**Note**: We are continuously updating the game, so be sure to check back, or join the [Discord](https://discord.gg/puDt6sjtSq) for the latest releases and improvements!
 
 ## Development Roadmap 🗺️
-### Alpha Version 0.1
+### Alpha Version 0.1 (v0.1A)
 - [ ] **Basic Movement** 🏃‍♂️: Implement character movement controls.
 - [ ] **Environment Interaction** 🌳: Allow players to interact with the environment.
 - [ ] **Inventory System** 🎒: Create a basic inventory system.
@@ -26,11 +26,11 @@ Ready to dive into our voxel adventure? <!-- You can download and play the lates
 - [ ] **Multiplayer?** 🤼: Multiplayer, maybe?
 - [ ] **Menu GUI's** 🖥: *Placeholder* GUI's for the game.
 
-### Alpha Version 0.2
+### Alpha Version 0.2 (v0.2A)
 - [ ] ...
 
 ## Join <!-- Us --> Me 🤝
-Interested in contributing to our project or staying updated on its development? Give feedback and ideas on [GitHub](https://github.com/HimejiDev/Voxel-Game/issues) <!-- or [Discord](https://discord.gg/your-discord-link) -->, and contribute on [GitHub](https://github.com/HimejiDev/Voxel-Game/pulls).
+Interested in contributing to our project or staying updated on its development? Give feedback and ideas on [GitHub](https://github.com/HimejiDev/Voxel-Game/issues) or [Discord](https://discord.gg/puDt6sjtSq), and contribute on [GitHub](https://github.com/HimejiDev/Voxel-Game/pulls).
 
 Stay tuned for more updates as <!-- we --> I work towards creating an immersive voxel adventure! 🌟🎮
 
