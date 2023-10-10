@@ -1,4 +1,4 @@
-# Voxel Game Project (Name WIP) 🎮
+ Voxel Game Project (Name WIP) 🎮
 
 ## Description 🌟
  Welcome to <!-- our --> my voxel sandbox game project. This game is designed to be a simple and calming, yet captivating experience, created with the Unity game engine. In this voxel world, <!-- we --> I aim to offer players the joy of peaceful farming and exploring 🌾🍂, along with the excitement of intense battles ⚔️. The visual style combines simplicity with a mesmerizing charm.
@@ -16,14 +16,13 @@ Ready to dive into our voxel adventure? <!-- You can download and play the lates
 
 ## Development Roadmap 🗺️
 ### Alpha Version 0.1 (v0.1A)
-- [ ] **Basic Movement** 🏃‍♂️: Implement character movement controls.
+- [x] **Basic Movement** 🏃‍♂️: Implement character movement controls.
 - [ ] **Environment Interaction** 🌳: Allow players to interact with the environment.
 - [ ] **Inventory System** 🎒: Create a basic inventory system.
 - [ ] **Day-Night Cycle** 🌞🌚: Implement a dynamic day-night cycle.
 - [ ] **Character Creation** 👤: Enable players to customize their in-game character.
 - [ ] **Basic Language System** 🌍: Implement language changing system, for les hassle along the way.
 - [ ] **Resource pack? And Mod Support** 💪: Support for mods and resource/texture packs, made by the *community*!
-- [ ] **Multiplayer?** 🤼: Multiplayer, maybe?
 - [ ] **Menu GUI's** 🖥: *Placeholder* GUI's for the game.
 
 ### Alpha Version 0.2 (v0.2A)
