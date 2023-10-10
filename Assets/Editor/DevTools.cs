@@ -7,13 +7,13 @@ public static class DevTools
     public static void PlayerAdd10Speed()
     {
         foreach (GameObject plyr in GameObject.FindGameObjectsWithTag("Player"))
-            plyr.GetComponent<PlayerMovement>().speed += 10;
+            plyr.GetComponent<PlayerController>().speed += 10;
     }
 
     [MenuItem("DevTools/Player/Speed (-10)")]
     public static void PlayerRemove10Speed()
     {
         foreach (GameObject plyr in GameObject.FindGameObjectsWithTag("Player"))
-            plyr.GetComponent<PlayerMovement>().speed -= 10;
+            plyr.GetComponent<PlayerController>().speed -= 10;
     }
 }
